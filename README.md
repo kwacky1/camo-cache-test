@@ -1,3 +1,1 @@
-Time for a new README
-
-With new features!
+OMG! We now have status checks.
