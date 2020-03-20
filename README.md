@@ -1,3 +1,3 @@
-Pull Request Templates are fun.
+Time for a new README
 
-Approvals are even more fun.
+With new features!
