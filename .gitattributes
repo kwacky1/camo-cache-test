@@ -1,1 +1,5 @@
 *.psm1 diff=utf16
+saritocat.png filter=lfs diff=lfs merge=lfs -text
+Another[[:space:]]Folder[[:space:]]With/Subfolder[[:space:]]and[[:space:]]Spaces/saritocat.png filter=lfs diff=lfs merge=lfs -text
+[Ff]older[[:space:]]With[[:space:]]Spaces filter=lfs diff=lfs merge=lfs -text
+*_Albedos.asset filter=lfs diff=lfs merge=lfs -text
