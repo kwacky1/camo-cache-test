@@ -1,3 +1,1 @@
-rebase?
-sign with protected branch rule
-locally!
+Can I commit directly.
