@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: get title
         id: get_title
-        run: echo ::set-output name=title::$(date "+%B") 
+        run: echo ::set-output name=title::$(date "+%B %Y") 
       - name: get due date
         id: get_due_on
         run: echo ::set-output name=date::$(date -d "$(date +%Y-%m-01) +1 month -1 day" --iso-8601="seconds") 

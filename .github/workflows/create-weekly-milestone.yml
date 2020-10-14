@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: get title
         id: get_title
-        run: echo ::set-output name=title::$(date "+%Y-W%V") 
+        run: echo ::set-output name=title::$(date "+%Y-W%U") 
       - name: get due date
         id: get_due_on
         run: echo ::set-output name=date::$(date "+%Y-%m-%dT07:00:00Z") 
