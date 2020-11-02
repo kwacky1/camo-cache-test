@@ -21,12 +21,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # Runs a set of commands using the runners shell
+      - name: Configure Git
+        run: |
+          git config --global user.email "kwacky1@github.com"
+          git config --global user.name "Simon Giesemann"
+          
       # Runs a single command using the runners shell
       - name: Create Tag
         run: git tag -a -m "Release ${{github.run_number}}" ${{github.run_number}}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
