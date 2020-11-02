@@ -6,7 +6,8 @@ name: run on pr
 # events but only for the dev branch
 on:
   pull_request:
-    branches: [ dev ]
+    branches:
+      - dev
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -22,7 +23,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo ${{github.event_name}}
+        run: git status
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
