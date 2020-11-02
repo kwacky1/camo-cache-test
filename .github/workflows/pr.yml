@@ -29,5 +29,5 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Create Tag
-        run: git tag -a -m "Release ${{github.run_number}}" ${{github.run_number}}
+        run: git tag -a -m "Release ${{github.run_number}}" v${{github.run_number}}.0
 
