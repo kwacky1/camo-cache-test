@@ -28,8 +28,8 @@ jobs:
           git config --global user.name "Simon Giesemann"
           
       # Runs a single command using the runners shell
-      - name: Switch to main branch
-        run: git checkout dev --no-guess
+      - name: Update main branch
+        run: git pull
 
       - name: Create Tag
         run: git tag -a -m "Release ${{github.run_number}}" v${{github.run_number}}.0
