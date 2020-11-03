@@ -29,7 +29,7 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Update main branch
-        run: git pull
+        run: git pull origin dev
 
       - name: Create Tag
         run: git tag -a -m "Release ${{github.run_number}}" v${{github.run_number}}.0
