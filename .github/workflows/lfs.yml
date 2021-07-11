@@ -1,4 +1,12 @@
-steps:
+name: LFS
+on:
+  workflow_dispatch:
+  
+jobs:
+  lfs:
+    name: Weekly Tracker
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2.3.4
         with:
           lfs: 'true'
