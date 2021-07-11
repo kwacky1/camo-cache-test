@@ -1,0 +1,7 @@
+steps:
+      - uses: actions/checkout@v2.3.4
+        with:
+          lfs: 'true'
+        env:
+          GIT_TRACE: 1
+          GIT_CURL_VERBOSE: 1
