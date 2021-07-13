@@ -10,12 +10,12 @@ jobs:
         env: 
           graphql_endpoint: "https://api.github.com/graphql"
           graphql_script: |
-                        mutation { \
-                           createDiscussion(input: {repositoryId: "152666800", categoryId: "33109653", body: "The body", title: "The title"}) { \
-                                  discussion { \
-                                    id \
-                                  } \
-                                } \
+                        mutation { 
+                           createDiscussion(input: {repositoryId: "MDEwOlJlcG9zaXRvcnkxNTI2NjY4MDA=", categoryId: "DIC_kwDOCRmCsM4B-TaV", body: "The body", title: "The title"}) { 
+                                  discussion { 
+                                    id 
+                                  } 
+                                } 
                               }        
         run: |
           graphql_script="$(echo ${graphql_script//\"/\\\"})"
