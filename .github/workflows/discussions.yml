@@ -19,7 +19,7 @@ jobs:
                               }        
         run: |
           graphql_script="$(echo ${graphql_script//\"/\\\"})"
-          echo $graph
+          echo $graphql_script
           curl -ksS \
           -H 'authorization: Bearer ${{ secrets.USER_TOKEN }}' \
           -H 'Content-Type: application/json' \
