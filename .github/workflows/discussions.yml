@@ -9,7 +9,7 @@ jobs:
       - name: Create Discussion
         env: 
           graphql_endpoint: "https://api.github.com/graphql"
-          graphql_query: |
+          graphql_script: |
                         mutation { \
                            createDiscussion(input: {repositoryId: "152666800", categoryId: "33109653", body: "The body", title: "The title"}) { \
                                   discussion { \
@@ -19,6 +19,7 @@ jobs:
                               }        
         run: |
           graphql_script="$(echo ${graphql_script//\"/\\\"})"
+          echo $graph
           curl -ksS \
           -H 'authorization: Bearer ${{ secrets.USER_TOKEN }}' \
           -H 'Content-Type: application/json' \
