@@ -1,0 +1,25 @@
+name: Create discussion
+
+on:
+  workflow_dispatch:
+jobs:
+  createDiscussion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Discussion
+        env: graphql_endpoint: "https://api.github.com/graphql"
+        env: graphql_query: "mutation { \
+                              createDiscussion(input: {repositoryId: "152666800", categoryId: "33109653", body: "The body", title: "The title"}) { \
+                                  discussion { \
+                                    id \
+                                  } \
+                                } \
+                              }"
+
+        run: graphql_script="$(echo ${graphql_script//\"/\\\"})"
+        run: |
+          curl -ksS \
+          -H 'authorization: Bearer ${{ secrets.USER_TOKEN }}' \
+          -H 'Content-Type: application/json' \
+          -d "{ \"query\": \"$graphql_script\"}" \
+          $graphql_endpoint | jq .
